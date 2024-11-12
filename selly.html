@@ -1,92 +1,85 @@
 <!DOCTYPE html>
 <html lang="id">
-<meta charset='UTF-8'/><meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5' name='viewport'/><meta content='IE=edge' http-equiv='X-UA-Compatible'/>
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Sono:wght@600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
-
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
-  <script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script><link href="https://feeldreams.github.io/dibacayuk/style.css" rel="stylesheet" type="text/css" />
-  <script src="https://kit.fontawesome.com/4f3ce16e3e.js" crossorigin="anonymous"></script>
-  
 <head>
-<title>For Selly</title>
-<link rel="icon" type="image/x-icon" href="https://malasid.github.io/favicon.png">
-<meta name="description" content="HTML Bucin Malas.id">
-<!-- 
-  Made with love by Rayys!
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unboxing Hadiah</title>
+  <style>
+    /* Global styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f06, #4a90e2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
   
-     Blog: feeldream.id
-     Instagram: @rayyarrr
-     TikTok: @feelthisray
-     Email: rayyar73@gmail.com
-     
-  Thanks to all <3
--->
+  /* Container for the video */
+  .video-container {
+    position: relative;
+    width: 80%;
+    max-width: 960px;
+    background-color: #000;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Hover effect for container */
+  .video-container:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Style untuk video */
+  .video-player {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Overlay dark gradient on hover */
+  .video-container:hover .video-player {
+    opacity: 0.7;
+  }
+  
+  /* Play button custom style */
+  .video-container::before {
+    content: "►";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Show play button when hover */
+  .video-container:hover::before {
+    opacity: 1;
+  }
+  
+  /* Optional: Style for controls (optional) */
+  video::-webkit-media-controls {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+  }
+  
+  </style>
 </head>
 <body>
-	
-   <!-- Ganti Audio di sini -->
-   <audio src="https://feeldreams.github.io/audio/nightchanges.mp3" id="linkmp3" class="sembunyi"></audio>
-   
-   <div id="bodyblur">
-     <!-- Wallpaper / Background --><img src="https://i.postimg.cc/jS6K8Rj9/IMG-20240802-WA0105.jpg" id="wallpaper"/>
-   </div>
-   
-   <div id='Content'>
 
-     <div id="ftAwal">
-       <!-- Stiker Pembuka -->
-       <img src="https://feeldreams.github.io/pandaputih.gif" id="ftoAwal"/>
-     </div>
+  <div class="video-container">
+    <video class="video-player" controls>
+      <source src="unboxing.mp4" type="video/mp4">
+    </video>
+  </div>
 
-     <div id="loveIn">
-       <!-- Tombol LOVE --><label class='lovein'>&#10084;</label>
-     </div>
-     <p id="ket">Sentuh LOVEnya!</p>
-
-     <div class="kumpulanstiker">
-         <!-- Stiker untuk Konten -->
-         <img src="https://feeldreams.github.io/pusn.gif" id="fotostiker"/>
-         <img src="https://feeldreams.github.io/wortel.gif" id="fotostiker1"/>
-         <img src="https://feeldreams.github.io/ngumpet.gif" id="fotostiker2"/>
-         <img src="https://feeldreams.github.io/bwa2.gif" id="fotostiker3"/>
-     </div>
-     
-     <div><div id='pergeseran'>
-     	
-        <!-- Edit Pesan di Sini -->
-        <p><b>
-	        <span>Haii Selly</span>
-        </b></p>
-        
-        <p><b>
-	        <span>Makasih kamu udah terima hadiah aku</span>
-        </b></p>
-       
-        <p><b>
-	        <span>Lihat sampe akhir yaww</span>
-        </b></p>
-        
-     </div></div>
-
-     <p id="ketgeser">Klik untuk Geser!</p>
-     
-     <!-- Edit Pesan Akhir di Sini -->
-     <div><blockquote id='bq'>
-       <p id="kalimat">Aku cuman mau bilang ke kamuu, Selamat yaaw kamu udah lulus JFT atau yang lainnya barangkali ku salah sebut, dan Terima Kasih kamu masih baik sama aku, dan maaf juga selama kamu dicirebon ku engga ada kasih kenangan yang bagus, dan cuman hadiah ini aja yang bisa dikasih, dan kamu harus semangat terus ga lama lagi kamu berangkat ke jepang, jangan lupain aku yaww</p>
-       <p id="pesanAkhir">i miss uuu forever >< 🤍</p>
-     </blockquote></div>
-     
-   </div>
-
-<script>
-  const body = document.querySelector("body"); const iniwp = [];iden = 1; const swalst = Swal.mixin({timer: 2500, allowOutsideClick: false, showConfirmButton: false, timerProgressBar: true, imageHeight: 90,}); audio = new Audio('' + linkmp3.src); ftganti=0;fungsi=0;fungsiAwal=0;deffotostiker=fotostiker.src;function berjatuhan() {const heart = document.createElement("div"); heart.className = "fas fa-heart"; heart.style.left = (Math.random() * 90)+"vw"; heart.style.animationDuration = (Math.random()*3)+2+"s"; body.appendChild(heart);} setInterval(function name(params) {var heartArr = document.querySelectorAll(".fa-heart"); if (heartArr.length > 100) {heartArr[0].remove()}},100);Content.style = "opacity:1;margin-top:14vh"; const swals = Swal.mixin({allowOutsideClick: false, cancelButtonColor: '#FF0040', imageHeight: 80,}); 
-</script>
-<script src="https://malasid.github.io/html/makasiayang.js"></script>
-<!-- Sampai Sini -->
 </body>
 </html>
